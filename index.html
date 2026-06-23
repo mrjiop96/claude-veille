@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Veille</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">📡 Claude Veille</div>
+    <div class="meta">Mis à jour le <span id="last-updated">—</span></div>
+    <input id="search" type="search" placeholder="Rechercher une capacité…" autocomplete="off">
+  </header>
+
+  <nav class="controls">
+    <div id="filters" class="filters"></div>
+    <label class="toggle"><input id="toggle-new" type="checkbox"> Nouveautés seulement</label>
+  </nav>
+
+  <main>
+    <section id="news-section">
+      <h2>🆕 Nouveautés</h2>
+      <ol id="news" class="timeline"></ol>
+    </section>
+
+    <section id="encyclopedia-section">
+      <h2>📚 Encyclopédie</h2>
+      <div id="encyclopedia" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Données d'abord (définit window.VEILLE_DATA), puis le rendu -->
+  <script src="data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
