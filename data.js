@@ -88,6 +88,16 @@ window.VEILLE_DATA = {
       tags: ["cli", "computer-use"]
     },
     {
+      id: "cc-destructive-cmd-guard",
+      category: "claude-code",
+      title: "Garde-fou commandes destructives",
+      summary: "Depuis 2.1.183, Claude Code bloque automatiquement git reset --hard, git checkout -- ., git clean, git stash drop, git commit --amend non-sessionnel ainsi que terraform/pulumi/cdk destroy, sauf si explicitement demandé.",
+      addedOn: "2026-06-23",
+      updatedOn: "2026-06-23",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "sécurité", "git"]
+    },
+    {
       id: "cc-scheduled-tasks",
       category: "claude-code",
       title: "Tâches planifiées (routines cloud)",
@@ -174,6 +184,20 @@ window.VEILLE_DATA = {
       category: "claude-code",
       title: "Claude Code 2.1.186",
       summary: "Commandes d'authentification MCP (claude mcp login/logout), filtrage par statut dans /workflows, section « Skills » dans /plugin, et réponse automatique à la sortie des commandes Bash.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-06-19",
+      category: "claude-code",
+      title: "Claude Code 2.1.183 – blocage des commandes destructives",
+      summary: "git reset --hard, git checkout -- ., git clean, terraform/pulumi/cdk destroy bloqués par défaut sauf demande explicite ; avertissements de dépréciation de modèles affichés en mode print (-p).",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-06-17",
+      category: "claude-code",
+      title: "Claude Code 2.1.181",
+      summary: "Nouvelle syntaxe /config key=value pour modifier n'importe quel réglage depuis le prompt ; runtime Bun passé à 1.4 ; retry automatique sur coupures connexion en phase de réflexion.",
       source: "https://code.claude.com/docs/en/changelog"
     },
     {
