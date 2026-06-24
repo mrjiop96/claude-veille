@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Veille — Synchronisation…</title>
+  <!-- Fallback si JS désactivé : bascule vers le dashboard après 5 s -->
+  <meta http-equiv="refresh" content="5; url=index.html">
+  <style>
+    :root {
+      --bg: #0d1117; --bg-2: #161b22;
+      --text: #e6edf3; --muted: #8b949e;
+      --accent: #d2a8ff; --accent-2: #58a6ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: radial-gradient(circle at 50% 38%, #1b2230 0%, var(--bg-2) 38%, var(--bg) 100%);
+      color: var(--text);
+      font: 16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 28px; text-align: center; overflow: hidden;
+    }
+
+    /* Antenne 📡 + ondes radar */
+    .radar { position: relative; width: 160px; height: 160px;
+             display: flex; align-items: center; justify-content: center; }
+    .radar .dish {
+      font-size: 78px; z-index: 2;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 18px rgba(210,168,255,.45));
+    }
+    .radar .wave {
+      position: absolute; inset: 0; margin: auto;
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 2px solid var(--accent-2);
+      opacity: 0; animation: ping 2.6s ease-out infinite;
+    }
+    .radar .wave:nth-child(2) { animation-delay: .85s; }
+    .radar .wave:nth-child(3) { animation-delay: 1.7s; }
+    @keyframes ping {
+      0%   { transform: scale(.4); opacity: .7; border-color: var(--accent); }
+      80%  { opacity: .12; }
+      100% { transform: scale(1.9); opacity: 0; border-color: var(--accent-2); }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(-4deg); }
+      50%     { transform: translateY(-8px) rotate(4deg); }
+    }
+
+    .title {
+      font-size: 34px; font-weight: 800; letter-spacing: .5px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .status { color: var(--muted); font-size: 14px; margin-top: -10px; }
+    .status::after { content: ""; animation: dots 1.4s steps(4,end) infinite; }
+    @keyframes dots {
+      0% { content: ""; } 25% { content: "."; }
+      50% { content: ".."; } 75% { content: "..."; }
+    }
+
+    /* Barre de progression */
+    .bar { width: 240px; height: 5px; border-radius: 999px;
+           background: var(--bg-2); overflow: hidden;
+           border: 1px solid #30363d; }
+    .bar > span {
+      display: block; height: 100%; width: 40%; border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      animation: load 5s ease-in-out forwards;
+    }
+    @keyframes load { 0% { width: 8%; } 70% { width: 82%; } 100% { width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="radar">
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="dish">📡</span>
+  </div>
+
+  <div class="title">Claude Veille</div>
+  <div class="status">Synchronisation en cours</div>
+  <div class="bar"><span></span></div>
+
+  <script>
+    // Bascule vers le dashboard une fois la synchro (git) raisonnablement terminée.
+    setTimeout(function () {
+      window.location.replace("index.html");
+    }, 4800);
+  </script>
+</body>
+</html>

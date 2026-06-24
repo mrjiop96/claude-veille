@@ -2,20 +2,22 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 title Claude Veille
-echo ============================================
-echo            CLAUDE VEILLE
-echo ============================================
-echo.
-echo [1/4] Recuperation des modifs des autres...
+
+REM --- Ouvre tout de suite l'ecran de chargement (page web stylee) ---
+start "" "splash.html"
+
+REM --- Synchronisation Git pendant que le splash s'affiche ---
 git add -A
 git diff --cached --quiet || git commit -m "maj veille %date% %time%"
 git pull --rebase
-echo.
-echo [2/4] Publication de tes modifs...
+if errorlevel 1 (
+  REM Conflit : on annule le rebase pour ne pas bloquer le depot.
+  git rebase --abort
+  echo CONFLIT detecte : tes modifs et celles de l'autre se chevauchent.
+  echo Le dashboard s'ouvre avec ta version locale. Demande de l'aide pour fusionner.
+  ping -n 6 127.0.0.1 >nul
+  goto :eof
+)
 git push
-echo.
-echo [3/4] Ouverture du dashboard...
-start "" "index.html"
-echo.
-echo [4/4] Termine. Cette fenetre se fermera dans 3 secondes.
-ping -n 4 127.0.0.1 >nul
+
+REM Le splash bascule tout seul vers index.html. Rien d'autre a faire.
