@@ -17,5 +17,5 @@ echo.
 echo [3/4] Ouverture du dashboard...
 start "" "index.html"
 echo.
-echo [4/4] Termine.
-timeout /t 2 >nul
+echo [4/4] Termine. Cette fenetre se fermera dans 3 secondes.
+ping -n 4 127.0.0.1 >nul
