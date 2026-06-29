@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-06-23",
+  lastUpdated: "2026-06-29",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -111,9 +111,9 @@ window.VEILLE_DATA = {
       id: "cc-auto-mode",
       category: "claude-code",
       title: "Auto mode",
-      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan ; disponible sur Bedrock, Vertex et Foundry pour Opus 4.7/4.8 (CLAUDE_CODE_ENABLE_AUTO_MODE=1).",
+      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan. Disponible sur Bedrock, Vertex et Foundry (CLAUDE_CODE_ENABLE_AUTO_MODE=1) ; le paramètre autoMode.classifyAllShell route également tous les appels Bash/PowerShell via le classificateur.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-23",
+      updatedOn: "2026-06-29",
       source: "https://code.claude.com/docs/en/changelog",
       tags: ["cli", "permissions"]
     },
@@ -126,6 +126,36 @@ window.VEILLE_DATA = {
       updatedOn: "2026-06-23",
       source: "https://code.claude.com/docs/en/changelog",
       tags: ["cli", "artifacts", "partage"]
+    },
+    {
+      id: "cc-mcp-login-logout",
+      category: "claude-code",
+      title: "Authentification MCP en ligne de commande",
+      summary: "Depuis v2.1.186, `claude mcp login` authentifie un serveur MCP depuis le shell sans passer par le menu /mcp, et `claude mcp logout` efface ses tokens stockés.",
+      addedOn: "2026-06-29",
+      updatedOn: "2026-06-29",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "mcp", "authentification"]
+    },
+    {
+      id: "cc-rewind",
+      category: "claude-code",
+      title: "/rewind – reprise avant /clear",
+      summary: "La commande /rewind permet de reprendre une conversation depuis un point antérieur à l'exécution de /clear, préservant l'historique complet de la session.",
+      addedOn: "2026-06-29",
+      updatedOn: "2026-06-29",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "historique"]
+    },
+    {
+      id: "cc-sandbox-credentials",
+      category: "claude-code",
+      title: "Paramètre sandbox.credentials",
+      summary: "Le paramètre sandbox.credentials (v2.1.187) empêche les commandes exécutées en mode sandbox de lire les fichiers de credentials et les variables d'environnement secrètes.",
+      addedOn: "2026-06-29",
+      updatedOn: "2026-06-29",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "sécurité", "sandbox"]
     },
     {
       id: "ai-projects",
@@ -158,6 +188,16 @@ window.VEILLE_DATA = {
       tags: ["web", "design"]
     },
     {
+      id: "ai-claude-tag",
+      category: "claude-ai",
+      title: "Claude Tag (Slack)",
+      summary: "Claude rejoint les canaux Slack comme coéquipier virtuel via @Claude. En bêta pour Team et Enterprise, il partage le contexte canal entre tous les membres et exécute des tâches de façon autonome.",
+      addedOn: "2026-06-29",
+      updatedOn: "2026-06-29",
+      source: "https://www.anthropic.com/news/introducing-claude-tag",
+      tags: ["web", "slack", "intégrations"]
+    },
+    {
       id: "eco-agent-sdk",
       category: "ecosystem",
       title: "Claude Agent SDK",
@@ -179,6 +219,20 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-06-26",
+      category: "claude-code",
+      title: "Claude Code semaine 26 (v2.1.187–2.1.195)",
+      summary: "sandbox.credentials bloque l'accès aux secrets en mode sandbox (v2.1.187) ; /rewind reprend depuis avant /clear (v2.1.191) ; autoMode.classifyAllShell route tous les shells via le classificateur (v2.1.193) ; autocomplétion live des chemins dans le mode bash ; –37 % de CPU pendant le streaming.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-06-23",
+      category: "claude-ai",
+      title: "Lancement de Claude Tag dans Slack",
+      summary: "Anthropic et Salesforce lancent Claude Tag en bêta (Team et Enterprise) : mentionnez @Claude dans un canal Slack pour l'intégrer comme coéquipier virtuel partageant le contexte du canal entre tous les membres.",
+      source: "https://www.anthropic.com/news/introducing-claude-tag"
+    },
     {
       date: "2026-06-22",
       category: "claude-code",

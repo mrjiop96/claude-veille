@@ -17,6 +17,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-06-23 : genèse — design, scaffold, dashboard sombre, seed data (16 features + 6 nouveautés réelles sourcées), commande /veille, vérif Playwright (filtres/recherche/toggle OK).
 - 2026-06-23 : reconstruction après suppression accidentelle des copies disque ; contenu restauré à l'identique depuis la session.
 - 2026-06-23 : veille hebdo — +1 feature (cc-destructive-cmd-guard), +2 news (Claude Code 2.1.183 blocage commandes destructives, Claude Code 2.1.181 /config key=value + Bun 1.4) → 17 features, 8 news.
+- 2026-06-29 : veille hebdo — +4 features (cc-mcp-login-logout, cc-rewind, cc-sandbox-credentials, ai-claude-tag), +1 màj feature (cc-auto-mode : autoMode.classifyAllShell), +2 news (Claude Code semaine 26 v2.1.187–2.1.195, lancement Claude Tag dans Slack) → 21 features, 10 news.
 
 ## Prochaines étapes
 - Synchro GitHub entre PC (clone/push/pull).
