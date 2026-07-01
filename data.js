@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-06-29",
+  lastUpdated: "2026-07-01",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -10,12 +10,22 @@ window.VEILLE_DATA = {
     {
       id: "models-current",
       category: "models-api",
-      title: "Famille de modèles Claude 4.x + Fable 5",
-      summary: "Opus 4.8 (claude-opus-4-8), Sonnet 4.6 (claude-sonnet-4-6), Haiku 4.5 (claude-haiku-4-5-20251001), Fable 5 (claude-fable-5).",
+      title: "Famille de modèles Claude actuelle",
+      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-23",
+      updatedOn: "2026-07-01",
       source: "https://docs.claude.com/en/docs/about-claude/models",
       tags: ["modèles", "ids"]
+    },
+    {
+      id: "models-sonnet-5",
+      category: "models-api",
+      title: "Claude Sonnet 5",
+      summary: "Nouveau modèle (claude-sonnet-5) : le Sonnet le plus agentique à ce jour, performance proche d'Opus 4.8 à moindre coût. Contexte 1M tokens, sortie 128k. Tarif de lancement 2 $ / 10 $ par Mtok jusqu'au 31 août 2026 (puis 3 $ / 15 $).",
+      addedOn: "2026-07-01",
+      updatedOn: "2026-07-01",
+      source: "https://www.anthropic.com/news/claude-sonnet-5",
+      tags: ["modèles", "sonnet", "agents"]
     },
     {
       id: "prompt-caching",
@@ -219,6 +229,27 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-01",
+      category: "models-api",
+      title: "Fable 5 de retour mondialement",
+      summary: "Après la suspension liée à la directive d'export du gouvernement US (12 juin), Anthropic redéploie Fable 5 pour tous les clients dans le monde à partir du 1er juillet, et propose un cadre commun d'évaluation de la gravité des jailbreaks.",
+      source: "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    {
+      date: "2026-06-30",
+      category: "models-api",
+      title: "Lancement de Claude Sonnet 5",
+      summary: "Nouveau modèle claude-sonnet-5 : le Sonnet le plus agentique (planification, usage d'outils, autonomie), performance proche d'Opus 4.8 à moindre coût, contexte 1M tokens. Tarif de lancement 2 $ / 10 $ par Mtok jusqu'au 31 août.",
+      source: "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      date: "2026-06-30",
+      category: "claude-code",
+      title: "Claude Code v2.1.196–2.1.197",
+      summary: "Sonnet 5 devient le modèle par défaut de Claude Code avec contexte 1M natif (2.1.197) ; modèles par défaut d'organisation dans la console admin, nommage lisible des sessions, pièces jointes cliquables et durcissement sécurité MCP (2.1.196) ; watchdog d'inactivité de flux activé par défaut (abandon après 5 min).",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-06-26",
       category: "claude-code",
