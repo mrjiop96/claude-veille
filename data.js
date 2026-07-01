@@ -8,6 +8,16 @@ window.VEILLE_DATA = {
   ],
   features: [
     {
+      id: "ai-claude-science",
+      category: "claude-ai",
+      title: "Claude Science",
+      summary: "Application IA (claude.com/science, bêta macOS et Linux) pour chercheurs : intègre 60+ bases de données scientifiques (génomique, protéomique, biochimie, biologie structurale, chémoinformatique), système multi-agents avec agent coordinateur, sous-agents spécialistes et agent vérificateur des citations/calculs. Chaque figure produit le code et l'environnement exacts pour une reproductibilité complète. Disponible pour Pro, Max, Team et Enterprise.",
+      addedOn: "2026-07-01",
+      updatedOn: "2026-07-01",
+      source: "https://www.anthropic.com/news/claude-science-ai-workbench",
+      tags: ["web", "science", "recherche", "multiagent"]
+    },
+    {
       id: "models-current",
       category: "models-api",
       title: "Famille de modèles Claude actuelle",
@@ -229,6 +239,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-01",
+      category: "claude-ai",
+      title: "Lancement de Claude Science",
+      summary: "Anthropic lance Claude Science en bêta (macOS et Linux) pour Pro, Max, Team et Enterprise : plan de travail IA intégrant 60+ bases scientifiques (génomique, protéomique, biologie structurale), système multi-agents avec vérification automatique des citations et reproductibilité totale des résultats. Programme AI for Science : bourses jusqu'à 30 000 $ de crédits, candidatures ouvertes jusqu'au 15 juillet 2026.",
+      source: "https://www.anthropic.com/news/claude-science-ai-workbench"
+    },
     {
       date: "2026-07-01",
       category: "models-api",
