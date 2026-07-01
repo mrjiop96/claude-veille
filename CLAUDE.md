@@ -24,6 +24,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
 - **GitHub Pages** actif (branche `master`, racine) → https://mrjiop96.github.io/claude-veille/
 - **Le site en ligne se met à jour à chaque `git push`** (Pages rebuild auto ~1 min). Workflow : `/veille` réécrit `data.js` → commit → push → site à jour.
+- **Veille automatique** : routine cloud quotidienne (8h04 Paris / `0 6 * * *` UTC) `trig_013TFiqanwfbv7aNoPCtKzT5` exécute `/veille` dans le cloud et push (ne commite que s'il y a du nouveau). Gestion : https://claude.ai/code/routines/trig_013TFiqanwfbv7aNoPCtKzT5
 - Aucun secret dans le repo (vérifié avant passage en public).
 
 ## Prochaines étapes
