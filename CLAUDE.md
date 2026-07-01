@@ -19,6 +19,13 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-06-23 : veille hebdo — +1 feature (cc-destructive-cmd-guard), +2 news (Claude Code 2.1.183 blocage commandes destructives, Claude Code 2.1.181 /config key=value + Bun 1.4) → 17 features, 8 news.
 - 2026-06-29 : veille hebdo — +4 features (cc-mcp-login-logout, cc-rewind, cc-sandbox-credentials, ai-claude-tag), +1 màj feature (cc-auto-mode : autoMode.classifyAllShell), +2 news (Claude Code semaine 26 v2.1.187–2.1.195, lancement Claude Tag dans Slack) → 21 features, 10 news.
 
+## Mise en ligne
+- Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
+- **GitHub Pages** actif (branche `master`, racine) → https://mrjiop96.github.io/claude-veille/
+- **Le site en ligne se met à jour à chaque `git push`** (Pages rebuild auto ~1 min). Workflow : `/veille` réécrit `data.js` → commit → push → site à jour.
+- Aucun secret dans le repo (vérifié avant passage en public).
+
 ## Prochaines étapes
 - Synchro GitHub entre PC (clone/push/pull).
 - Possibles : tri par date, export, dédup intelligente.
+- Optionnel : ajouter un `favicon.ico` (404 bénin actuel).
