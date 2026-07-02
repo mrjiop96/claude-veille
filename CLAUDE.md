@@ -20,6 +20,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-06-29 : veille hebdo — +4 features (cc-mcp-login-logout, cc-rewind, cc-sandbox-credentials, ai-claude-tag), +1 màj feature (cc-auto-mode : autoMode.classifyAllShell), +2 news (Claude Code semaine 26 v2.1.187–2.1.195, lancement Claude Tag dans Slack) → 21 features, 10 news.
 - 2026-07-01 : veille — +1 feature (models-sonnet-5), màj models-current (famille : + Sonnet 5, Sonnet 4.6/Opus 4.7 en legacy), +3 news (Fable 5 de retour 01/07, lancement Sonnet 5 30/06, Claude Code v2.1.196–197 avec Sonnet 5 par défaut) → 22 features, 13 news.
 - 2026-07-01 : veille auto — +1 feature (ai-claude-science), +1 news (lancement Claude Science bêta pour chercheurs, 60+ bases scientifiques, multi-agents) → 23 features, 14 news.
+- 2026-07-02 : veille auto — +1 feature (cc-chrome : Claude in Chrome GA), +1 news (Claude Code v2.1.198 : Chrome GA, notifications agents bg, auto-PR draft, héritage modèle/extended-thinking, résilience réseau) → 24 features, 15 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille

@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-01",
+  lastUpdated: "2026-07-02",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -148,6 +148,16 @@ window.VEILLE_DATA = {
       tags: ["cli", "artifacts", "partage"]
     },
     {
+      id: "cc-chrome",
+      category: "claude-code",
+      title: "Claude in Chrome",
+      summary: "Extension Chrome permettant d'utiliser Claude directement dans le navigateur (pages web, formulaires, rédaction). Passée de bêta à disponibilité générale dans Claude Code v2.1.198 (1er juillet 2026). Les agents en arrière-plan commitent, pushent et ouvrent automatiquement une PR draft à la fin d'un travail de code.",
+      addedOn: "2026-07-02",
+      updatedOn: "2026-07-02",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "chrome", "extension", "navigateur"]
+    },
+    {
       id: "cc-mcp-login-logout",
       category: "claude-code",
       title: "Authentification MCP en ligne de commande",
@@ -239,6 +249,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-01",
+      category: "claude-code",
+      title: "Claude Code v2.1.198",
+      summary: "Claude in Chrome passe en disponibilité générale (sorti de bêta) ; nouvelles notifications d'agents en arrière-plan avec types de hook agent_needs_input / agent_completed ; les agents de fond commitent, pushent et ouvrent automatiquement une PR draft à la fin du travail de code ; l'agent Explore hérite du modèle de la session principale (plafonné à Opus) ; les sous-agents et la compaction héritent de la config extended thinking ; résilience réseau améliorée (retry sur ECONNRESET sans couper la session).",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-01",
       category: "claude-ai",
