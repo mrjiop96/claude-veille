@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-02",
+  lastUpdated: "2026-07-03",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -61,9 +61,9 @@ window.VEILLE_DATA = {
       id: "cc-skills",
       category: "claude-code",
       title: "Skills",
-      summary: "Modules de compétences invocables via le slash, qui chargent des instructions spécialisées.",
+      summary: "Modules de compétences invocables via le slash, qui chargent des instructions spécialisées. Depuis v2.1.199, les invocations peuvent être empilées (`/skill-a /skill-b do XYZ`) jusqu'à 5 skills simultanément.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-23",
+      updatedOn: "2026-07-03",
       source: "https://docs.claude.com/en/docs/claude-code",
       tags: ["cli", "skills"]
     },
@@ -249,6 +249,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-02",
+      category: "claude-code",
+      title: "Claude Code v2.1.199",
+      summary: "Invocations de skills empilées jusqu'à 5 (`/skill-a /skill-b do XYZ`, plus seulement la première) ; messages d'erreur SSL/TLS immédiatement actionnables (arrêt rapide au lieu de consommer les tentatives) ; réponses partielles en streaming préservées si le serveur renvoie une erreur en milieu de flux ; sous-agents bloqués par une limite de taux remontent leur travail partiel au parent plutôt que d'échouer silencieusement. Résilience : rétentatives automatiques des 429 transitoires avec backoff pour les abonnés ; nouvelle variable CLAUDE_CODE_RETRY_WATCHDOG (300 tentatives par défaut) ; plafond de 15 sur CLAUDE_CODE_MAX_RETRIES supprimé. Principaux correctifs : daemon Linux (auto-kill toutes les ~50 s), sessions background macOS sur SSH, `claude stop` en concurrence avec redémarrage du daemon, indicateurs de progression bloqués, mémoire faible en sessions remote, panneau sous-agents, commandes `/model` et `/fast` depuis une vue sous-agent, masquage du stderr dans les hooks SessionStart/Setup/SubagentStart, Plan mode (appels navigateur en lecture seule auto-autorisés), Claude in Chrome (reconnexion en boucle), récupération de config corrompue.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-01",
       category: "claude-code",
