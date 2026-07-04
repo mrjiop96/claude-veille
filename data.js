@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-03",
+  lastUpdated: "2026-07-04",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -249,6 +249,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-03",
+      category: "claude-code",
+      title: "Claude Code v2.1.200–v2.1.201",
+      summary: "v2.1.200 : mode de permission par défaut passé à « Manuel » dans toutes les interfaces (CLI, VS Code, JetBrains) — les flags --permission-mode manual et \"defaultMode\": \"manual\" sont désormais acceptés ; les dialogs AskUserQuestion ne continuent plus automatiquement par défaut (opt-in timeout via /config) ; multiples corrections de stabilité du daemon background (crash avec config malformée, sessions s'arrêtant après sleep/wake, agents ne redémarrant pas après crash avec daemon.lock stale, corruption de roster transiente) ; sous-agents : cutoff rate-limit sans texte renvoie une erreur propre au lieu d'un résultat vide ; correctifs accessibilité (lecteurs d'écran, glyphes décoratifs masqués, rendu sous tmux 3.4+, message voice dictation) ; plugin project-scoped correctement chargé depuis git worktrees. v2.1.201 : hotfix — les sessions Claude Sonnet 5 n'utilisent plus le rôle système mid-conversation pour les rappels de harnais.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-02",
       category: "claude-code",

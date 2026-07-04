@@ -22,6 +22,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-01 : veille auto — +1 feature (ai-claude-science), +1 news (lancement Claude Science bêta pour chercheurs, 60+ bases scientifiques, multi-agents) → 23 features, 14 news.
 - 2026-07-02 : veille auto — +1 feature (cc-chrome : Claude in Chrome GA), +1 news (Claude Code v2.1.198 : Chrome GA, notifications agents bg, auto-PR draft, héritage modèle/extended-thinking, résilience réseau) → 24 features, 15 news.
 - 2026-07-03 : veille auto — +1 news (Claude Code v2.1.199 : skills empilées ×5, erreurs SSL actionnables, réponses partielles préservées, résilience 429 transitoires, nombreux correctifs), màj feature cc-skills (invocations empilées) → 24 features, 16 news.
+- 2026-07-04 : veille auto — +1 news (Claude Code v2.1.200–v2.1.201 : permission mode par défaut → Manuel, AskUserQuestion sans auto-continuation, stabilité daemon background, hotfix rôle système Sonnet 5) → 24 features, 17 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
