@@ -260,6 +260,13 @@ window.VEILLE_DATA = {
   ],
   news: [
     {
+      date: "2026-07-02",
+      category: "models-api",
+      title: "Fable 5 : safeguards cybersécurité et cadre CJS de gravité des jailbreaks",
+      summary: "Anthropic publie les détails des mesures de sécurité de Fable 5 : un classifieur à 4 catégories (interdit, à haut risque/double usage, à faible risque/double usage, bénin) distingue les usages légitimes de la cybersécurité défensive des usages malveillants. En parallèle, Anthropic propose avec Amazon, Microsoft, Google et les partenaires Glasswing un cadre d'évaluation CJS (Claude Jailbreak Severity) côté 0-4 selon 4 mesures : gain de capacité, portée, facilité de militarisation et découvrabilité.",
+      source: "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework"
+    },
+    {
       date: "2026-07-03",
       category: "claude-code",
       title: "Claude Code v2.1.200–v2.1.201",

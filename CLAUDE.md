@@ -24,6 +24,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-03 : veille auto — +1 news (Claude Code v2.1.199 : skills empilées ×5, erreurs SSL actionnables, réponses partielles préservées, résilience 429 transitoires, nombreux correctifs), màj feature cc-skills (invocations empilées) → 24 features, 16 news.
 - 2026-07-04 : veille auto — +1 news (Claude Code v2.1.200–v2.1.201 : permission mode par défaut → Manuel, AskUserQuestion sans auto-continuation, stabilité daemon background, hotfix rôle système Sonnet 5) → 24 features, 17 news.
 - 2026-07-06 : veille auto — +1 feature (cc-apps-gateway : passerelle enterprise auto-hébergée pour Bedrock/GCP/Foundry avec SSO OIDC, RBAC, limites de dépense, télémétrie OTLP, disponible depuis v2.1.195), +1 news (lancement Claude apps gateway, 29 juin) → 25 features, 18 news.
+- 2026-07-06 : veille auto (2e passe) — +1 news (Fable 5 safeguards cybersécurité : classifieur 4 catégories + cadre CJS 0-4 avec Amazon/Microsoft/Google/Glasswing, 2 juil.) → 25 features, 19 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
