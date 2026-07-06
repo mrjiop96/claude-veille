@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-04",
+  lastUpdated: "2026-07-06",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -158,6 +158,16 @@ window.VEILLE_DATA = {
       tags: ["cli", "chrome", "extension", "navigateur"]
     },
     {
+      id: "cc-apps-gateway",
+      category: "claude-code",
+      title: "Claude apps gateway",
+      summary: "Passerelle auto-hébergée (intégrée au binaire claude) pour déployer Claude Code en entreprise via Amazon Bedrock, Claude Platform on AWS, Google Cloud ou Microsoft Foundry. Authentification SSO (OIDC) sans clé API côté développeur, contrôle d'accès aux modèles par groupe IdP, politiques gérées (managed settings), limites de dépense par utilisateur/groupe, et télémétrie OTLP vers le collecteur interne de l'organisation. Disponible depuis v2.1.195.",
+      addedOn: "2026-07-06",
+      updatedOn: "2026-07-06",
+      source: "https://code.claude.com/docs/en/claude-apps-gateway",
+      tags: ["cli", "enterprise", "sso", "bedrock", "cloud"]
+    },
+    {
       id: "cc-mcp-login-logout",
       category: "claude-code",
       title: "Authentification MCP en ligne de commande",
@@ -297,6 +307,13 @@ window.VEILLE_DATA = {
       title: "Claude Code v2.1.196–2.1.197",
       summary: "Sonnet 5 devient le modèle par défaut de Claude Code avec contexte 1M natif (2.1.197) ; modèles par défaut d'organisation dans la console admin, nommage lisible des sessions, pièces jointes cliquables et durcissement sécurité MCP (2.1.196) ; watchdog d'inactivité de flux activé par défaut (abandon après 5 min).",
       source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-06-29",
+      category: "claude-code",
+      title: "Lancement du Claude apps gateway",
+      summary: "Anthropic lance le Claude apps gateway : passerelle auto-hébergée intégrée au binaire claude permettant aux entreprises de déployer Claude Code via Amazon Bedrock, Claude Platform on AWS, Google Cloud ou Microsoft Foundry avec SSO OIDC (sans clé API côté développeur), RBAC par groupe IdP, politiques gérées, limites de dépense par utilisateur/groupe et télémétrie OTLP vers le collecteur interne. Disponible depuis Claude Code v2.1.195.",
+      source: "https://code.claude.com/docs/en/claude-apps-gateway"
     },
     {
       date: "2026-06-26",
