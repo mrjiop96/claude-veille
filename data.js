@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-06",
+  lastUpdated: "2026-07-07",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -21,9 +21,9 @@ window.VEILLE_DATA = {
       id: "models-current",
       category: "models-api",
       title: "Famille de modèles Claude actuelle",
-      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy.",
+      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 7 juillet 2026, Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-01",
+      updatedOn: "2026-07-07",
       source: "https://docs.claude.com/en/docs/about-claude/models",
       tags: ["modèles", "ids"]
     },
@@ -259,6 +259,20 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-07",
+      category: "models-api",
+      title: "Fable 5 : fin de l'inclusion abonnement, accès via crédits d'usage",
+      summary: "À partir du 7 juillet 2026, Fable 5 n'est plus inclus dans les limites hebdomadaires des abonnements Pro, Max, Team et Enterprise Premium (l'inclusion à hauteur de 50 % des limites hebdomadaires prenait fin ce jour). L'accès à Fable 5 requiert désormais l'activation des crédits d'usage (usage credits) sur son compte Claude. Sans crédits activés, les utilisateurs perdent l'accès à Fable 5.",
+      source: "https://www.anthropic.com/claude/fable"
+    },
+    {
+      date: "2026-07-06",
+      category: "claude-code",
+      title: "Claude Code v2.1.202",
+      summary: "Nouveau paramètre /config « Dynamic workflow size » (small/medium/large) pour orienter la taille des workflows dynamiques — indication non contraignante. Attributs OTel workflow.run_id et workflow.name sur les agents lancés par workflow pour retracer l'activité en télémétrie. /review <pr> revient en passe unique rapide (utiliser /code-review <niveau> <pr#> pour la revue multi-agents). Correctifs : crash Ctrl+R dans la recherche d'historique, sessions renommées réinitialisées au redémarrage, échecs mTLS transitoires lors de rotation de certificats, commandes Remote Control échouant avec « Unknown command », images/fichiers sans légende depuis Remote Control perdus silencieusement, URL sign-in non cliquable via SSH, crash d'ouverture de chat depuis claude agents, corruption de strings unicode dans les scripts workflow, dictée vocale en boucle infinie sur échec micro, mode de permission incorrect dans Remote Control mobile/web, lenteur du picker de sessions sur repos avec nombreux git worktrees, skill déjà chargée ajoutant ses instructions en double.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-02",
       category: "models-api",
