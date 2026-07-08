@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-07",
+  lastUpdated: "2026-07-08",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,26 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "ai-cowork",
+      category: "claude-ai",
+      title: "Claude Cowork",
+      summary: "Espace de travail agentique de Claude : lancé en janvier 2026 en version desktop, disponible sur web et mobile depuis le 7 juillet 2026 pour les abonnés Max (autres plans à venir). Les sessions continuent de s'exécuter même sans appareil en ligne. Chat et Cowork partagent une interface unifiée (sidebar, recherche, projets & artefacts). Intégrations Microsoft 365 avec outils d'écriture activés : rédaction/envoi d'e-mails, gestion de calendrier, fichiers OneDrive et SharePoint. Limites d'utilisation doublées prolongées jusqu'au 5 août 2026.",
+      addedOn: "2026-07-08",
+      updatedOn: "2026-07-08",
+      source: "https://claude.com/blog/cowork-web-mobile",
+      tags: ["web", "mobile", "productivité", "agents", "microsoft365"]
+    },
+    {
+      id: "ai-claude-gov",
+      category: "claude-ai",
+      title: "Claude for Government",
+      summary: "Bêta publique lancée le 7 juillet 2026 : Claude Code et Claude Cowork dans un environnement certifié FedRAMP High (Claude for Government Desktop) pour les agences publiques américaines. Fonctionnalités dédiées : historique de conversations local sur appareils gérés par l'agence, administration au niveau département, limites de dépense et de modèles configurables, journaux d'audit infalsifiables et documentation support ATO. Déploiement via MDM standard, Anthropic reste l'interlocuteur contractuel sans relation cloud provider séparée.",
+      addedOn: "2026-07-08",
+      updatedOn: "2026-07-08",
+      source: "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government",
+      tags: ["gouvernement", "fedramp", "enterprise", "sécurité"]
+    },
     {
       id: "ai-claude-science",
       category: "claude-ai",
@@ -259,6 +279,20 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-07",
+      category: "claude-ai",
+      title: "Claude Cowork : extension web et mobile",
+      summary: "Anthropic étend Claude Cowork (lancé en janvier 2026 sur desktop) aux plateformes web et mobile pour les abonnés Max, avec déploiement progressif sur les autres plans. Les sessions Cowork restent actives même sans appareil connecté. Chat et Cowork partagent désormais une interface unifiée (sidebar, recherche, projets & artefacts). Intégration Microsoft 365 avec outils d'écriture : e-mails, calendrier, OneDrive, SharePoint. Limites d'utilisation doublées prolongées jusqu'au 5 août 2026.",
+      source: "https://claude.com/blog/cowork-web-mobile"
+    },
+    {
+      date: "2026-07-07",
+      category: "claude-ai",
+      title: "Claude for Government : bêta publique FedRAMP High",
+      summary: "Anthropic lance Claude Code et Claude Cowork en bêta publique pour le secteur public américain (Claude for Government Desktop) dans un environnement certifié FedRAMP High. Fonctionnalités gouvernementales : historique local chiffré sur appareils gérés, administration par département, limites de dépense et de modèles configurables, journaux d'audit infalsifiables, documentation support ATO. Déploiement via MDM standard, Anthropic reste l'interlocuteur contractuel sans relation cloud provider séparée.",
+      source: "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
+    },
     {
       date: "2026-07-07",
       category: "models-api",

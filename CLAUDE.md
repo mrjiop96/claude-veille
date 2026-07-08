@@ -26,6 +26,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-06 : veille auto — +1 feature (cc-apps-gateway : passerelle enterprise auto-hébergée pour Bedrock/GCP/Foundry avec SSO OIDC, RBAC, limites de dépense, télémétrie OTLP, disponible depuis v2.1.195), +1 news (lancement Claude apps gateway, 29 juin) → 25 features, 18 news.
 - 2026-07-06 : veille auto (2e passe) — +1 news (Fable 5 safeguards cybersécurité : classifieur 4 catégories + cadre CJS 0-4 avec Amazon/Microsoft/Google/Glasswing, 2 juil.) → 25 features, 19 news.
 - 2026-07-07 : veille auto — +2 news (Fable 5 fin inclusion abonnement/passage crédits d'usage au 7 juil., Claude Code v2.1.202 : workflow size config, OTel workflow attrs, /review passe unique, 15 correctifs), màj feature models-current (Fable 5 nécessite crédits d'usage) → 25 features, 21 news.
+- 2026-07-08 : veille auto — +2 features (ai-cowork : Claude Cowork extension web/mobile + M365, ai-claude-gov : Claude for Government bêta FedRAMP High), +2 news (Cowork web/mobile 7 juil., Claude for Government 7 juil.) → 27 features, 23 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
