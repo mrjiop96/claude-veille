@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-08",
+  lastUpdated: "2026-07-09",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,16 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "cc-doctor",
+      category: "claude-code",
+      title: "/doctor – Diagnostic et réparation",
+      summary: "Depuis v2.1.205 (8 juillet 2026), /doctor est un outil de diagnostic complet capable de détecter et réparer automatiquement les problèmes de configuration de Claude Code (prérequis, permissions, serveurs MCP, config). L'alias /checkup est disponible. Remplace la commande précédente qui n'affichait que des informations de version.",
+      addedOn: "2026-07-09",
+      updatedOn: "2026-07-09",
+      source: "https://code.claude.com/docs/en/changelog",
+      tags: ["cli", "diagnostic", "debug"]
+    },
     {
       id: "ai-cowork",
       category: "claude-ai",
@@ -41,9 +51,9 @@ window.VEILLE_DATA = {
       id: "models-current",
       category: "models-api",
       title: "Famille de modèles Claude actuelle",
-      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 7 juillet 2026, Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage.",
+      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 7 juillet 2026, Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage. Claude Opus 4.1 (claude-opus-4-1-20250805) est déprécié et sera retiré le 5 août 2026 : migrer vers Opus 4.8.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-07",
+      updatedOn: "2026-07-09",
       source: "https://docs.claude.com/en/docs/about-claude/models",
       tags: ["modèles", "ids"]
     },
@@ -279,6 +289,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-08",
+      category: "claude-code",
+      title: "Claude Code v2.1.203–v2.1.205",
+      summary: "v2.1.203 (7 juil.) : alerte avant expiration de connexion pour éviter l'interruption des sessions background ; badge ⏸ gris visible dans le footer en mode permission Manuel ; working directories de la session exposés dans MCP roots/list avec notification de changement ; correctifs : gel 15-20 s sur macOS lors du switch de sessions background (régression 2.1.196), sessions background devenant définitivement non-réactives sur token de daemon périmé, flickering JetBrains 2026.1+, PowerShell hang sur repos avec nombreux worktrees, voice mode, managed settings avec entrée invalide. v2.1.204 (8 juil.) : correctif hook events ne streamant pas pendant SessionStart en sessions headless (causait la réapparition des workers remote par le scheduler). v2.1.205 (8 juil.) : /doctor devient un outil de diagnostic et réparation complet (alias /checkup) ; règle auto mode bloquant la falsification des transcripts de session ; téléchargements de mise à jour en streaming (−400 Mo de pic mémoire) ; vue agents améliorée (état coloré, titres générés automatiquement, lien PR) ; réservation des noms MCP « Claude Browser » et « Claude Preview » ; correctifs : --json-schema, suppression de worktrees Windows, linking session→PR, plugin LSP multi-extension, crash Windows sur dossier supprimé, project verify skills réécrites inutilement.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-07",
       category: "claude-ai",
