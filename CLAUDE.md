@@ -28,6 +28,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-07 : veille auto — +2 news (Fable 5 fin inclusion abonnement/passage crédits d'usage au 7 juil., Claude Code v2.1.202 : workflow size config, OTel workflow attrs, /review passe unique, 15 correctifs), màj feature models-current (Fable 5 nécessite crédits d'usage) → 25 features, 21 news.
 - 2026-07-08 : veille auto — +2 features (ai-cowork : Claude Cowork extension web/mobile + M365, ai-claude-gov : Claude for Government bêta FedRAMP High), +2 news (Cowork web/mobile 7 juil., Claude for Government 7 juil.) → 27 features, 23 news.
 - 2026-07-09 : veille auto — +1 feature (cc-doctor : /doctor diagnostic & réparation auto depuis v2.1.205), +1 news (Claude Code v2.1.203–v2.1.205 : alerte expiration login, badge ⏸ mode Manuel, MCP roots/list, /doctor, auto mode anti-tampering transcripts, streaming downloads, vue agents améliorée), màj feature models-current (Opus 4.1 déprécié → retraite 5 août 2026) → 28 features, 24 news.
+- 2026-07-10 : veille auto — +1 feature (ai-reflect : Reflect with Claude bêta, dashboard usage dans Paramètres), màj feature cc-doctor (check CLAUDE.md trimming v2.1.206), +3 news (Claude Code v2.1.206 : /doctor CLAUDE.md trimming, /cd suggestions, /commit-push-pr gateway, vue agents largeur complète, 20+ correctifs ; lancement Reflect with Claude bêta 9 juil. ; Ben Bernanke rejoint le LTBT d'Anthropic 9 juil.) → 29 features, 27 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille

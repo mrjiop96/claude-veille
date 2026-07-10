@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-09",
+  lastUpdated: "2026-07-10",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -11,11 +11,21 @@ window.VEILLE_DATA = {
       id: "cc-doctor",
       category: "claude-code",
       title: "/doctor – Diagnostic et réparation",
-      summary: "Depuis v2.1.205 (8 juillet 2026), /doctor est un outil de diagnostic complet capable de détecter et réparer automatiquement les problèmes de configuration de Claude Code (prérequis, permissions, serveurs MCP, config). L'alias /checkup est disponible. Remplace la commande précédente qui n'affichait que des informations de version.",
+      summary: "Depuis v2.1.205 (8 juillet 2026), /doctor est un outil de diagnostic complet capable de détecter et réparer automatiquement les problèmes de configuration de Claude Code (prérequis, permissions, serveurs MCP, config). L'alias /checkup est disponible. Remplace la commande précédente qui n'affichait que des informations de version. Depuis v2.1.206 (9 juillet), /doctor propose également de détecter et supprimer le contenu superflu des fichiers CLAUDE.md versionnés que Claude pourrait dériver du code source.",
       addedOn: "2026-07-09",
-      updatedOn: "2026-07-09",
+      updatedOn: "2026-07-10",
       source: "https://code.claude.com/docs/en/changelog",
       tags: ["cli", "diagnostic", "debug"]
+    },
+    {
+      id: "ai-reflect",
+      category: "claude-ai",
+      title: "Reflect with Claude",
+      summary: "Lancé en bêta le 9 juillet 2026, Reflect with Claude est un tableau de bord accessible dans les Paramètres (web et desktop) qui génère un résumé personnalisé de votre usage de Claude : sujets récurrents, patterns d'utilisation, types de tâches travaillées. Permet une réflexion intentionnelle sur la façon dont on utilise l'assistant.",
+      addedOn: "2026-07-10",
+      updatedOn: "2026-07-10",
+      source: "https://www.anthropic.com/news/reflect-with-claude",
+      tags: ["web", "desktop", "dashboard", "usage"]
     },
     {
       id: "ai-cowork",
@@ -289,6 +299,27 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-09",
+      category: "ecosystem",
+      title: "Ben Bernanke rejoint le Long-Term Benefit Trust d'Anthropic",
+      summary: "L'ancien président de la Réserve fédérale américaine (2006–2014), prix Nobel d'économie 2022, rejoint le Long-Term Benefit Trust (LTBT) d'Anthropic le 9 juillet 2026. Le LTBT est l'organisme indépendant chargé de s'assurer qu'Anthropic respecte sa mission de développement responsable de l'IA. Bernanke y apportera son expertise économique, notamment sur les effets de l'IA sur l'économie, et rejoindra Neil Buddy Shah, Richard Fontaine et Mariano-Florentino Cuéllar.",
+      source: "https://www.anthropic.com/news/ben-bernanke"
+    },
+    {
+      date: "2026-07-09",
+      category: "claude-ai",
+      title: "Lancement de Reflect with Claude (bêta)",
+      summary: "Anthropic lance Reflect with Claude en bêta : un tableau de bord dans les Paramètres (web et desktop) qui génère un résumé personnalisé de l'usage de Claude — sujets récurrents, patterns d'utilisation, types de tâches. Objectif : permettre une utilisation plus intentionnelle et réflexive de l'assistant. Accessible directement depuis les réglages de l'application.",
+      source: "https://www.anthropic.com/news/reflect-with-claude"
+    },
+    {
+      date: "2026-07-09",
+      category: "claude-code",
+      title: "Claude Code v2.1.206",
+      summary: "Suggestions de chemins dans /cd (comme /add-dir) ; /doctor détecte et propose de nettoyer les CLAUDE.md versionnés contenant du contenu dérivable du code ; /commit-push-pr autorise automatiquement le push vers le remote configuré (remote.pushDefault ou unique) en plus d'origin ; gateway : /login supporte les endpoints Anthropic-operated publics ; EnterWorktree demande confirmation avant d'entrer un worktree hors .claude/worktrees/ ; les agents background se mettent à jour silencieusement après une mise à jour de Claude Code (supprime le délai stale-session) ; amélioration qualité /code-review sur claude-opus-4-8 à tous les niveaux ; colonne status de la vue agents utilise toute la largeur terminal. Correctifs notables : expiration de login renvoyant une erreur de modèle trompeuse, --resume/--continue sans réponse clavier, timeout MCP ignoré (60 s au lieu du paramètre configuré), CLAUDE_CODE_EXTRA_BODY ignoré par les workers background, ré-authentification OAuth MCP après un seul échec de refresh.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-08",
       category: "claude-code",
