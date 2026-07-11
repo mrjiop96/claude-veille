@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-10",
+  lastUpdated: "2026-07-11",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -171,9 +171,9 @@ window.VEILLE_DATA = {
       id: "cc-auto-mode",
       category: "claude-code",
       title: "Auto mode",
-      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan. Disponible sur Bedrock, Vertex et Foundry (CLAUDE_CODE_ENABLE_AUTO_MODE=1) ; le paramètre autoMode.classifyAllShell route également tous les appels Bash/PowerShell via le classificateur.",
+      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan. Depuis v2.1.207 (11 juillet 2026), disponible par défaut sur Bedrock, Vertex AI et Foundry sans opt-in — désactivable via `disableAutoMode` dans les paramètres (précédemment nécessitait `CLAUDE_CODE_ENABLE_AUTO_MODE=1`). Le paramètre autoMode.classifyAllShell route également tous les appels Bash/PowerShell via le classificateur.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-29",
+      updatedOn: "2026-07-11",
       source: "https://code.claude.com/docs/en/changelog",
       tags: ["cli", "permissions"]
     },
@@ -299,6 +299,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-11",
+      category: "claude-code",
+      title: "Claude Code v2.1.207",
+      summary: "Auto mode disponible sans opt-in (`CLAUDE_CODE_ENABLE_AUTO_MODE`) sur Bedrock, Vertex AI et Foundry — désactivable via `disableAutoMode` dans les paramètres. Bedrock, Vertex et Claude Platform on AWS passent par défaut à Claude Opus 4.8. Correctif de sécurité : injection shell dans les hooks de plugins via `${user_config.*}` (commandes en shell-form désormais rejetées). `/doctor` signale désormais les launchers gérés en externe. Correctifs notables : gel terminal et lag de saisie lors du streaming de longs blocs, paramètres gérés à distance enregistrés sans dialog de consentement depuis les runs non-interactifs (`-p`/SDK), faux avertissements d'injection de prompt sur des mises à jour système bénignes, auto-updater écrasant les scripts/symlinks launcher personnalisés, saut du transcript lors de la fin du streaming, sessions background affichant un statut périmé après coupure réseau, blocage indéfini Windows sur résolution lente des credentials AWS (garde 60 s), `pluginConfigs` non relus depuis le `.claude/settings.json` projet.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-09",
       category: "ecosystem",
