@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-11",
+  lastUpdated: "2026-07-12",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,16 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "cc-desktop-browser",
+      category: "claude-code",
+      title: "Navigateur intégré au Desktop",
+      summary: "Depuis v2.1.202 (semaine du 6 juillet 2026), Claude Code Desktop embarque un navigateur intégré. Claude peut ouvrir n'importe quel site web, lire le contenu, cliquer et interagir avec les pages, exactement comme il le fait avec les aperçus du serveur de développement local. Le navigateur est sandboxé et configurable : persistance de session optionnelle, classificateurs de sécurité appliqués sur les actions des sites externes.",
+      addedOn: "2026-07-12",
+      updatedOn: "2026-07-12",
+      source: "https://code.claude.com/docs/en/whats-new/2026-w28",
+      tags: ["cli", "desktop", "navigateur", "browser"]
+    },
     {
       id: "cc-doctor",
       category: "claude-code",
@@ -61,9 +71,9 @@ window.VEILLE_DATA = {
       id: "models-current",
       category: "models-api",
       title: "Famille de modèles Claude actuelle",
-      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 7 juillet 2026, Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage. Claude Opus 4.1 (claude-opus-4-1-20250805) est déprécié et sera retiré le 5 août 2026 : migrer vers Opus 4.8.",
+      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001, 200k tokens). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 12 juillet 2026 (23h59 PT), Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage (l'inclusion avait été prolongée du 7 au 12 juillet). Claude Opus 4.1 (claude-opus-4-1-20250805) est déprécié et sera retiré le 5 août 2026 : migrer vers Opus 4.8.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-09",
+      updatedOn: "2026-07-12",
       source: "https://docs.claude.com/en/docs/about-claude/models",
       tags: ["modèles", "ids"]
     },
@@ -299,6 +309,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-12",
+      category: "models-api",
+      title: "Fable 5 : fin définitive de l'inclusion abonnement",
+      summary: "Au 12 juillet 2026 (23h59 PT), Fable 5 cesse définitivement d'être inclus dans les limites hebdomadaires des abonnements Pro, Max, Team et Enterprise. L'accès via les 50 % des limites hebdomadaires avait été prolongé du 7 au 12 juillet suite aux retours négatifs des utilisateurs, annoncé via le compte @claudeai sur X et un article de support mis à jour. Désormais, l'accès à Fable 5 requiert exclusivement des crédits d'usage : 10 $ / Mtok en entrée, 50 $ / Mtok en sortie, avec 90 % de réduction sur l'entrée mise en cache.",
+      source: "https://www.anthropic.com/claude/fable"
+    },
     {
       date: "2026-07-11",
       category: "claude-code",
