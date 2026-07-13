@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-12",
+  lastUpdated: "2026-07-13",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,26 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "cc-desktop-linux",
+      category: "claude-code",
+      title: "Claude Desktop sur Linux (bêta)",
+      summary: "Depuis la semaine du 29 juin 2026 (semaine 27), l'application Claude Desktop est disponible en bêta sur Ubuntu 22.04+ et Debian 12+ (x86_64 et arm64). Elle s'installe via le dépôt apt officiel d'Anthropic et reçoit ses mises à jour par les mises à jour de paquets habituelles. Elle offre la même expérience Chat, Cowork et Claude Code qu'en macOS et Windows : sessions parallèles, revue de diff visuelle, terminal et éditeur intégrés, prévisualisation d'application en direct. Limitations actuelles : Computer Use et dictée vocale non disponibles sous Linux.",
+      addedOn: "2026-07-13",
+      updatedOn: "2026-07-13",
+      source: "https://code.claude.com/docs/en/desktop-linux",
+      tags: ["cli", "linux", "desktop", "ubuntu", "debian"]
+    },
+    {
+      id: "cc-radio",
+      category: "claude-code",
+      title: "/radio – Claude FM",
+      summary: "La commande `/radio` (ajoutée en semaine 27, fin juin 2026) ouvre Claude FM — le flux lo-fi 24h/24 d'Anthropic — dans le navigateur par défaut, ou imprime l'URL du flux quand aucun navigateur n'est disponible (SSH sans affichage). La musique est créée et curatée par des musiciens. Fonctionnalité non disponible sur Amazon Bedrock, Google Cloud Agent Platform ou Microsoft Foundry.",
+      addedOn: "2026-07-13",
+      updatedOn: "2026-07-13",
+      source: "https://code.claude.com/docs/en/whats-new/2026-w27",
+      tags: ["cli", "easter-egg", "radio", "musique"]
+    },
     {
       id: "cc-desktop-browser",
       category: "claude-code",
@@ -141,10 +161,10 @@ window.VEILLE_DATA = {
       id: "cc-subagents",
       category: "claude-code",
       title: "Sous-agents",
-      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…).",
+      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…). Depuis v2.1.198 (semaine 27), les sous-agents s'exécutent en arrière-plan par défaut : Claude continue de travailler pendant leur exécution et récupère leurs résultats à la fin, au lieu de mettre la conversation en pause. Les sous-agents en arrière-plan remontent leurs demandes de permission dans la session principale. Le champ de métadonnées `background` permet de forcer le comportement.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-23",
-      source: "https://docs.claude.com/en/docs/claude-code/sub-agents",
+      updatedOn: "2026-07-13",
+      source: "https://code.claude.com/docs/en/sub-agents#run-subagents-in-foreground-or-background",
       tags: ["cli", "agents"]
     },
     {
@@ -191,10 +211,10 @@ window.VEILLE_DATA = {
       id: "cc-artifacts",
       category: "claude-code",
       title: "Artifacts partageables",
-      summary: "Claude Code capture le travail en cours sous forme de pages visuelles live et partageables (walkthroughs de PR, dashboards, checklists), avec historique de versions.",
+      summary: "Claude Code capture le travail en cours sous forme de pages visuelles live et partageables (walkthroughs de PR, dashboards, checklists), avec historique de versions. Depuis la semaine 27 (fin juin 2026), les Artifacts sont en disponibilité générale et inclus dans les plans Pro et Max (en plus de Team et Enterprise où ils étaient disponibles depuis la semaine 25).",
       addedOn: "2026-06-23",
-      updatedOn: "2026-06-23",
-      source: "https://code.claude.com/docs/en/changelog",
+      updatedOn: "2026-07-13",
+      source: "https://code.claude.com/docs/en/artifacts",
       tags: ["cli", "artifacts", "partage"]
     },
     {
@@ -309,6 +329,20 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-01",
+      category: "claude-code",
+      title: "Claude Desktop arrive sur Linux en bêta (Ubuntu/Debian)",
+      summary: "Anthropic lance en bêta l'application Claude Desktop sur Linux (Ubuntu 22.04+ et Debian 12+, x86_64 et arm64). Installation via le dépôt apt officiel ; mises à jour par le gestionnaire de paquets système. Même expérience que macOS/Windows : Chat, Cowork, Claude Code, sessions parallèles, revue de diff, terminal et éditeur intégrés, prévisualisation d'app en direct. Limitations : Computer Use et dictée vocale absentes sous Linux pour l'instant.",
+      source: "https://code.claude.com/docs/en/desktop-linux"
+    },
+    {
+      date: "2026-07-01",
+      category: "claude-code",
+      title: "Artifacts en disponibilité générale – inclus dans Pro et Max",
+      summary: "Les Artifacts (pages visuelles partageables générées par Claude Code : walkthroughs de PR, dashboards, checklists) passent en disponibilité générale lors de la semaine 27 et sont désormais inclus dans les plans Pro et Max, en plus de Team et Enterprise. Historique de versions disponible pour toutes les pages Artifact publiées.",
+      source: "https://code.claude.com/docs/en/artifacts"
+    },
     {
       date: "2026-07-12",
       category: "models-api",
