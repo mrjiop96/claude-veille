@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-13",
+  lastUpdated: "2026-07-14",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -329,6 +329,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-14",
+      category: "claude-code",
+      title: "Claude Code v2.1.208",
+      summary: "Mode lecteur d'écran opt-in : rendu en texte brut via `claude --ax-screen-reader`, `CLAUDE_AX_SCREEN_READER=1` ou `\"axScreenReader\": true` dans les paramètres. Nouveau paramètre `vimInsertModeRemaps` : définit des séquences à deux touches en mode insertion Vim (ex. `jj` → Escape). Variable `CLAUDE_CODE_PROCESS_WRAPPER` : les lancements automatiques (service background, vue agents) passent par un exécutable wrapper imposé par l'entreprise. Prise en charge du clic souris dans les menus multi-sélection et les champs « Other » en mode plein écran. Principaux correctifs : fast mode resté désactivé après changement de modèle, messages d'agents background perdus en cas d'échec de livraison, fenêtre de contexte momentanément réinitialisée après mise à jour automatique du CLI, échecs de connexion HTTP/2 GOAWAY, sortie stream-json tronquée sur les longues réponses, parsing de variables d'environnement en notation scientifique (`1e6` → `1`), tables Markdown de plus de 200 lignes bloquant l'UI, outil d'édition de fichiers sur fichiers modifiés, plusieurs problèmes sur Read/Grep/Glob/touch sur des chemins spéciaux.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-01",
       category: "claude-code",

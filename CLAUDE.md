@@ -32,6 +32,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-11 : veille auto — màj feature cc-auto-mode (Auto mode GA sans opt-in sur Bedrock/Vertex/Foundry depuis v2.1.207), +1 news (Claude Code v2.1.207 : Auto mode GA, Bedrock/Vertex défaut Opus 4.8, correctif sécurité injection shell hooks plugins, /doctor launchers externes, nombreux correctifs stabilité/streaming) → 29 features, 28 news.
 - 2026-07-12 : veille auto — +1 feature (cc-desktop-browser : navigateur intégré au Desktop depuis v2.1.202, semaine 28), màj feature models-current (date fin inclusion Fable 5 corrigée : 12 juil. au lieu de 7 juil., contexte Haiku 200k), +1 news (Fable 5 fin définitive inclusion abonnement 12 juil. 23h59 PT, accès via crédits uniquement) → 30 features, 29 news.
 - 2026-07-13 : veille auto — +2 features (cc-desktop-linux : Desktop Linux bêta Ubuntu/Debian via apt ; cc-radio : /radio ouvre Claude FM lofi radio), màj features (cc-subagents : sous-agents en arrière-plan par défaut depuis v2.1.198 ; cc-artifacts : GA inclus Pro/Max depuis semaine 27), +2 news (Claude Desktop Linux bêta 1 juil. ; Artifacts GA Pro/Max 1 juil.) → 32 features, 31 news.
+- 2026-07-14 : veille auto — +1 news (Claude Code v2.1.208 : mode lecteur d'écran, vimInsertModeRemaps, CLAUDE_CODE_PROCESS_WRAPPER, clic souris plein écran, nombreux correctifs stabilité/streaming) → 32 features, 32 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
