@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-14",
+  lastUpdated: "2026-07-15",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -201,9 +201,9 @@ window.VEILLE_DATA = {
       id: "cc-auto-mode",
       category: "claude-code",
       title: "Auto mode",
-      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan. Depuis v2.1.207 (11 juillet 2026), disponible par défaut sur Bedrock, Vertex AI et Foundry sans opt-in — désactivable via `disableAutoMode` dans les paramètres (précédemment nécessitait `CLAUDE_CODE_ENABLE_AUTO_MODE=1`). Le paramètre autoMode.classifyAllShell route également tous les appels Bash/PowerShell via le classificateur.",
+      summary: "Remplace les invites de permission par des vérifications de sécurité en arrière-plan. Depuis v2.1.207 (11 juillet 2026), disponible par défaut sur Bedrock, Vertex AI et Foundry sans opt-in — désactivable via `disableAutoMode` dans les paramètres (précédemment nécessitait `CLAUDE_CODE_ENABLE_AUTO_MODE=1`). Le paramètre autoMode.classifyAllShell route également tous les appels Bash/PowerShell via le classificateur. Depuis v2.1.210 (14 juillet 2026), le classificateur de permission utilise Sonnet 5 par défaut pour les sessions externes, épinglé à la première demande de session.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-11",
+      updatedOn: "2026-07-15",
       source: "https://code.claude.com/docs/en/changelog",
       tags: ["cli", "permissions"]
     },
@@ -329,6 +329,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-14",
+      category: "claude-code",
+      title: "Claude Code v2.1.209–v2.1.210",
+      summary: "v2.1.209 (14 juil.) : correctif des dialogues `/model` et autres bloqués dans les sessions d'agents en arrière-plan (`claude agents`). v2.1.210 (14 juil.) : compteur de temps écoulé en direct sur les appels d'outils longue durée ; avertissement de sécurité pour les règles de permission `Write(path)` / `NotebookEdit(path)` / `Glob(path)` — conseille d'utiliser `Edit` ou `Read` à la place ; durcissement de l'outil Agent contre l'injection de prompt indirecte via des sous-agents ; mode auto : le classificateur de permission utilise désormais Sonnet 5 par défaut pour les sessions externes (épinglé à la première demande de session) ; le pied de page agents indique combien d'agents attendent une entrée. Correction de 25+ bugs : crash de `claude attach`, serveurs MCP de plugins détruits lors de la re-sync, timeout de hook signalé comme rejet utilisateur, verrous de worktrees fantômes laissés par des sessions tuées, placeholders positionnels `$1`/`$2` silencieusement supprimés dans les skills, et faux positifs du mot-clé `ultracode` sur des payloads de webhook.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-14",
       category: "claude-code",
