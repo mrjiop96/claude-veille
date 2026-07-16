@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-15",
+  lastUpdated: "2026-07-16",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,26 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "ai-claude-teachers",
+      category: "claude-ai",
+      title: "Claude for Teachers",
+      summary: "Lancé le 14 juillet 2026, Claude for Teachers offre aux enseignants K-12 américains vérifiés un accès gratuit aux fonctionnalités premium de Claude. Inclut une bibliothèque de skills pédagogiques (planification de cours alignée sur les standards de chaque État, instruction différenciée par niveau), des intégrations directes avec des plateformes éducatives partenaires (ASSISTments, Brisk Teaching, Canva Education, MagicSchool, Snorkl…) et des protections FERPA renforcées (données non utilisées pour l'entraînement, DPA K-12). Développé en partenariat avec l'American Federation of Teachers.",
+      addedOn: "2026-07-16",
+      updatedOn: "2026-07-16",
+      source: "https://www.anthropic.com/news/claude-for-teachers",
+      tags: ["web", "éducation", "enseignants", "k12", "gratuit"]
+    },
+    {
+      id: "eco-claude-corps",
+      category: "ecosystem",
+      title: "Claude Corps",
+      summary: "Programme de fellowship national lancé le 11 juin 2026 avec un engagement initial de 150 millions de dollars d'Anthropic. Forme 1 000 fellows (première cohorte de 100, début octobre 2026) en début de carrière à l'usage de Claude, les place dans des associations américaines et les rémunère pour une année en présentiel. Partenariat avec CodePath (employeur des fellows) et Social Finance (évaluation). Candidatures ouvertes à toute personne de plus de 18 ans avec moins de 2 ans d'expérience professionnelle, autorisée à travailler aux États-Unis.",
+      addedOn: "2026-07-16",
+      updatedOn: "2026-07-16",
+      source: "https://www.anthropic.com/news/claude-corps",
+      tags: ["fellowship", "nonprofit", "éducation", "communauté", "usa"]
+    },
     {
       id: "cc-desktop-linux",
       category: "claude-code",
@@ -329,6 +349,27 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-16",
+      category: "claude-code",
+      title: "Claude Code v2.1.211",
+      summary: "Nouvelle option `--forward-subagent-text` (et `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT`) pour inclure le texte et la réflexion des sous-agents dans la sortie stream-json. Amélioration du reporting des agents background : Claude attend la vraie complétion et remonte le statut des agents encore actifs au lieu de fabriquer des résultats. Les variables d'entier acceptent désormais la notation scientifique (`1e6`) et les séparateurs (`64_000`). Correctif de sécurité : neutralisation des caractères bi-directionnels/zero-width dans les aperçus de permission pour empêcher l'altération visuelle du message d'approbation ; l'auto mode ne peut plus court-circuiter une décision `ask` d'un hook PreToolUse sur Bash non-sandboxé. Correction d'un bug de prompt-caching sur Bedrock/Vertex/Mantle/Foundry (bloc de contexte système final facturé en tokens frais à chaque requête). Les règles « always allow » sont désormais sauvegardées à la racine du dépôt git (persistent entre worktrees). Plus de 30 autres correctifs : déconnexions simultanées de sessions partageant un credential store au réveil, reconnexion MCP après session web inactive, `/loop` masquant la session dans `/resume`, coût session non réinitialisé par `/clear`, agents background tués se relançant automatiquement, titre de session affichant le refus du modèle sur les prompts contenant des liens, etc.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-07-14",
+      category: "claude-ai",
+      title: "Lancement de Claude for Teachers",
+      summary: "Anthropic lance Claude for Teachers le 14 juillet 2026 : accès gratuit aux fonctionnalités premium pour tous les enseignants K-12 américains vérifiés. La plateforme inclut une bibliothèque de skills pédagogiques (planification de cours alignée sur les standards de chaque État, instruction différenciée par niveau), des intégrations éducatives (ASSISTments, Brisk Teaching, Canva Education, MagicSchool, Snorkl, Eedi, Diffit, Coteach), et des protections FERPA renforcées (DPA K-12, données non utilisées pour l'entraînement). Développé en partenariat avec l'American Federation of Teachers.",
+      source: "https://www.anthropic.com/news/claude-for-teachers"
+    },
+    {
+      date: "2026-06-11",
+      category: "ecosystem",
+      title: "Lancement de Claude Corps",
+      summary: "Anthropic lance Claude Corps le 11 juin 2026 avec un engagement initial de 150 millions de dollars : programme de fellowship national qui forme 1 000 jeunes (moins de 2 ans d'expérience, 18+ ans) à l'utilisation de Claude et les place dans des associations américaines à raison d'un an en présentiel et à plein-temps. Première cohorte de 100 fellows débutant en octobre 2026 ; candidatures clôturées le 17 juillet. Partenariat avec CodePath (employeur officiel) et Social Finance (évaluation d'impact).",
+      source: "https://www.anthropic.com/news/claude-corps"
+    },
     {
       date: "2026-07-14",
       category: "claude-code",

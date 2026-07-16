@@ -34,6 +34,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-13 : veille auto — +2 features (cc-desktop-linux : Desktop Linux bêta Ubuntu/Debian via apt ; cc-radio : /radio ouvre Claude FM lofi radio), màj features (cc-subagents : sous-agents en arrière-plan par défaut depuis v2.1.198 ; cc-artifacts : GA inclus Pro/Max depuis semaine 27), +2 news (Claude Desktop Linux bêta 1 juil. ; Artifacts GA Pro/Max 1 juil.) → 32 features, 31 news.
 - 2026-07-14 : veille auto — +1 news (Claude Code v2.1.208 : mode lecteur d'écran, vimInsertModeRemaps, CLAUDE_CODE_PROCESS_WRAPPER, clic souris plein écran, nombreux correctifs stabilité/streaming) → 32 features, 32 news.
 - 2026-07-15 : veille auto — +1 news (Claude Code v2.1.209–v2.1.210 : correctif dialogues mode agents, compteur temps écoulé, avertissement règles Write/NotebookEdit/Glob, durcissement Agent anti-injection prompt, mode auto classifier → Sonnet 5, 25+ correctifs), màj feature cc-auto-mode (classifier Sonnet 5 sessions externes) → 32 features, 33 news.
+- 2026-07-16 : veille auto — +2 features (ai-claude-teachers : Claude for Teachers accès gratuit K-12 US, standards alignés, intégrations éducatives, FERPA ; eco-claude-corps : fellowship $150M Claude Corps, 1 000 fellows, associations US), +3 news (Claude Code v2.1.211 : 30+ correctifs sécurité/reporting/caching, 16 juil. ; lancement Claude for Teachers 14 juil. ; lancement Claude Corps 11 juin) → 34 features, 36 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
