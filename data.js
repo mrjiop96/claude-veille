@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-16",
+  lastUpdated: "2026-07-17",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -181,9 +181,9 @@ window.VEILLE_DATA = {
       id: "cc-subagents",
       category: "claude-code",
       title: "Sous-agents",
-      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…). Depuis v2.1.198 (semaine 27), les sous-agents s'exécutent en arrière-plan par défaut : Claude continue de travailler pendant leur exécution et récupère leurs résultats à la fin, au lieu de mettre la conversation en pause. Les sous-agents en arrière-plan remontent leurs demandes de permission dans la session principale. Le champ de métadonnées `background` permet de forcer le comportement.",
+      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…). Depuis v2.1.198 (semaine 27), les sous-agents s'exécutent en arrière-plan par défaut : Claude continue de travailler pendant leur exécution et récupère leurs résultats à la fin, au lieu de mettre la conversation en pause. Les sous-agents en arrière-plan remontent leurs demandes de permission dans la session principale. Le champ de métadonnées `background` permet de forcer le comportement. Depuis v2.1.212 (17 juil. 2026), `/subtask` permet la délégation in-session (sous-agent synchrone dans la conversation courante), tandis que `/fork` crée désormais une copie de la conversation dans une nouvelle session de fond.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-13",
+      updatedOn: "2026-07-17",
       source: "https://code.claude.com/docs/en/sub-agents#run-subagents-in-foreground-or-background",
       tags: ["cli", "agents"]
     },
@@ -349,6 +349,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-17",
+      category: "claude-code",
+      title: "Claude Code v2.1.212",
+      summary: "v2.1.212 (17 juil.) : `/fork` crée désormais une copie de la conversation dans une nouvelle session de fond au lieu de lancer un sous-agent en session — `/subtask` prend en charge la délégation in-session synchrone. Nouveau `claude auto-mode reset` pour réinitialiser la configuration de l'auto mode (`--yes` pour sauter la confirmation). Limites de session configurables : requêtes WebSearch (200 par défaut, `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) et spawn de sous-agents (200, `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`). Les MCP tool calls dépassant 2 minutes passent automatiquement en arrière-plan (configurable via `CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS`). `/resume` ouvre un picker de sessions passées (y compris supprimées) à reprendre en fond. Correctifs : Plan mode n'exécute plus automatiquement les commandes Bash modifiant des fichiers sans permission explicite ; correctif sécurité sur la création de worktrees via symlinks ; correctif orphaning SIGTERM des processus Bash ; compatibilité PowerShell 5.1 Windows Group Policy (le daemon préfère PowerShell 7) ; corrections UI (autocomplétion shell mode, troncature emoji, raccourcis clavier) ; améliorations `/ultrareview` (gestion des références PR, fetch de branches, messages d'erreur) ; corrections mTLS et gestion de la portée OAuth en sessions hébergées ; compatibilité OTel HTTP export ; relances automatiques sur erreurs 529 lors des web searches/fetches.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-16",
       category: "claude-code",
