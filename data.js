@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-17",
+  lastUpdated: "2026-07-18",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -231,11 +231,11 @@ window.VEILLE_DATA = {
       id: "cc-artifacts",
       category: "claude-code",
       title: "Artifacts partageables",
-      summary: "Claude Code capture le travail en cours sous forme de pages visuelles live et partageables (walkthroughs de PR, dashboards, checklists), avec historique de versions. Depuis la semaine 27 (fin juin 2026), les Artifacts sont en disponibilité générale et inclus dans les plans Pro et Max (en plus de Team et Enterprise où ils étaient disponibles depuis la semaine 25).",
+      summary: "Claude Code capture le travail en cours sous forme de pages visuelles live et partageables (walkthroughs de PR, dashboards, checklists), avec historique de versions. Depuis la semaine 27 (fin juin 2026), les Artifacts sont en disponibilité générale et inclus dans les plans Pro et Max. Depuis la semaine 29 (juillet 2026) : liens de partage public, rôles éditeur pour édition collaborative sur Team et Enterprise, création d'artifacts depuis les sessions Claude Tag. Les artifacts publiés peuvent appeler les connecteurs MCP du spectateur pour afficher des données en direct et déclencher des actions à chaque chargement de page — chaque appel passe par les connexions du compte du spectateur, qui approuve l'accès à la première demande.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-13",
+      updatedOn: "2026-07-18",
       source: "https://code.claude.com/docs/en/artifacts",
-      tags: ["cli", "artifacts", "partage"]
+      tags: ["cli", "artifacts", "partage", "mcp"]
     },
     {
       id: "cc-chrome",
@@ -349,6 +349,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-18",
+      category: "claude-code",
+      title: "Claude Code v2.1.214",
+      summary: "v2.1.214 (18 juil.) : nouvel outil EndConversation permettant à Claude de mettre fin proprement à une conversation en cas d'abus ou de tentative de jailbreak. Correctifs de sécurité importants : les règles d'autorisation `dir/**` à segment unique (ex. `Edit(src/**)`) n'approuvent désormais les écritures que dans `<cwd>/dir` et non dans l'arborescence entière ; contournement de vérification de permissions corrigé sur les sessions PowerShell 5.1 Windows ; contrôles Bash corrigés sur les redirections de descripteurs de fichiers, les commandes très longues (>10 000 caractères) et les subscripts de variables zsh en `[[ ]]` ; commandes `help` et `man` avec options non sûres bloquées ; invite de permission ajoutée pour les commandes `docker` avec flags de redirection daemon. Nouvelles traces OTel : attributs `message.uuid`, `client_request_id` et `tool_source`. Horodatage ISO `modified` ajouté au frontmatter des fichiers mémoire. Heartbeat de progression périodique sur les appels d'outils longs. Correctifs divers : streaming échouant avec 'Socket is closed' derrière proxies d'entreprise Windows, encodage Unicode PowerShell/Python sur Windows, nettoyage des sessions inactives, `/ultrareview` bloquant sur les références PR.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
     {
       date: "2026-07-17",
       category: "claude-code",
