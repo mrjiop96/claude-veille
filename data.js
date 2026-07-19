@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-18",
+  lastUpdated: "2026-07-19",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -111,9 +111,9 @@ window.VEILLE_DATA = {
       id: "models-current",
       category: "models-api",
       title: "Famille de modèles Claude actuelle",
-      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001, 200k tokens). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 12 juillet 2026 (23h59 PT), Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage (l'inclusion avait été prolongée du 7 au 12 juillet). Claude Opus 4.1 (claude-opus-4-1-20250805) est déprécié et sera retiré le 5 août 2026 : migrer vers Opus 4.8.",
+      summary: "Fable 5 (claude-fable-5, le plus capable, 1M tokens), Opus 4.8 (claude-opus-4-8), Sonnet 5 (claude-sonnet-5, 1M tokens), Haiku 4.5 (claude-haiku-4-5-20251001, 200k tokens). Sonnet 4.6 et Opus 4.7/4.6 passent en legacy. Depuis le 19 juillet 2026 (23h59 PT), Fable 5 n'est plus inclus dans les abonnements Pro/Max/Team et nécessite des crédits d'usage (10 $ / Mtok en entrée, 50 $ / Mtok en sortie) — l'inclusion avait été prolongée du 7 au 12 juillet, puis une seconde fois jusqu'au 19 juillet suite à la concurrence d'OpenAI Sol. Claude Opus 4.1 (claude-opus-4-1-20250805) est déprécié et sera retiré le 5 août 2026 : migrer vers Opus 4.8.",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-12",
+      updatedOn: "2026-07-19",
       source: "https://docs.claude.com/en/docs/about-claude/models",
       tags: ["modèles", "ids"]
     },
@@ -350,6 +350,13 @@ window.VEILLE_DATA = {
   ],
   news: [
     {
+      date: "2026-07-19",
+      category: "claude-code",
+      title: "Claude Code v2.1.215",
+      summary: "v2.1.215 (19 juil.) : Claude Code n'exécute plus automatiquement les skills /verify et /code-review de sa propre initiative ; ils doivent désormais être invoqués manuellement par l'utilisateur via /verify ou /code-review lorsqu'il souhaite les déclencher.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
       date: "2026-07-18",
       category: "claude-code",
       title: "Claude Code v2.1.214",
@@ -413,10 +420,17 @@ window.VEILLE_DATA = {
       source: "https://code.claude.com/docs/en/artifacts"
     },
     {
+      date: "2026-07-13",
+      category: "models-api",
+      title: "Fable 5 : deuxième prolongation de l'inclusion jusqu'au 19 juillet",
+      summary: "Anthropic prolonge une seconde fois l'accès inclus à Fable 5 dans les abonnements — jusqu'au dimanche 19 juillet 2026 à 23h59 PT — sous la pression concurrentielle du lancement d'OpenAI Sol. Pendant cette fenêtre, chaque abonné peut utiliser Fable 5 jusqu'à 50 % de ses limites hebdomadaires sans coût supplémentaire. À partir du 20 juillet, tout accès à Fable 5 nécessite des crédits d'usage (10 $ / Mtok en entrée, 50 $ / Mtok en sortie). Plans éligibles : Pro, Max, Team et sièges premium Enterprise. Utilisateurs non éligibles : plan gratuit, sièges Enterprise standard, clients au forfait d'usage, utilisateurs API.",
+      source: "https://www.anthropic.com/claude/fable"
+    },
+    {
       date: "2026-07-12",
       category: "models-api",
-      title: "Fable 5 : fin définitive de l'inclusion abonnement",
-      summary: "Au 12 juillet 2026 (23h59 PT), Fable 5 cesse définitivement d'être inclus dans les limites hebdomadaires des abonnements Pro, Max, Team et Enterprise. L'accès via les 50 % des limites hebdomadaires avait été prolongé du 7 au 12 juillet suite aux retours négatifs des utilisateurs, annoncé via le compte @claudeai sur X et un article de support mis à jour. Désormais, l'accès à Fable 5 requiert exclusivement des crédits d'usage : 10 $ / Mtok en entrée, 50 $ / Mtok en sortie, avec 90 % de réduction sur l'entrée mise en cache.",
+      title: "Fable 5 : première fin d'inclusion abonnement (puis prolongée)",
+      summary: "Au 12 juillet 2026 (23h59 PT), Fable 5 devait cesser d'être inclus dans les limites hebdomadaires des abonnements Pro, Max, Team et Enterprise. L'accès via les 50 % des limites hebdomadaires avait été prolongé du 7 au 12 juillet suite aux retours négatifs des utilisateurs. Finalement, Anthropic a accordé une deuxième extension jusqu'au 19 juillet (voir news du 13 juillet). L'accès à Fable 5 requiert des crédits d'usage depuis le 20 juillet : 10 $ / Mtok en entrée, 50 $ / Mtok en sortie, avec 90 % de réduction sur l'entrée mise en cache.",
       source: "https://www.anthropic.com/claude/fable"
     },
     {
@@ -439,6 +453,13 @@ window.VEILLE_DATA = {
       title: "Lancement de Reflect with Claude (bêta)",
       summary: "Anthropic lance Reflect with Claude en bêta : un tableau de bord dans les Paramètres (web et desktop) qui génère un résumé personnalisé de l'usage de Claude — sujets récurrents, patterns d'utilisation, types de tâches. Objectif : permettre une utilisation plus intentionnelle et réflexive de l'assistant. Accessible directement depuis les réglages de l'application.",
       source: "https://www.anthropic.com/news/reflect-with-claude"
+    },
+    {
+      date: "2026-07-09",
+      category: "ecosystem",
+      title: "UST intègre Claude pour l'IA physique (partenariat)",
+      summary: "UST, société de services en ingénierie qui construit les environnements dont dépendent ses clients pour mettre sur le marché puces, voitures et appareils connectés, déploie Claude Code dans ses pipelines. Claude lit les schémas et pinouts d'un ingénieur, puis rédige et exécute les tests de régression qui confirment qu'un changement de conception n'a pas causé d'effet secondaire involontaire — tâches auparavant scriptées manuellement. Intégration dans la plateforme iDEC d'UST : réduction rapportée de 50 à 70 % des cycles de validation. UST forme en parallèle 20 000 ingénieurs, architectes et consultants à l'usage de Claude dans le monde entier.",
+      source: "https://www.anthropic.com/news/ust-claude"
     },
     {
       date: "2026-07-09",
