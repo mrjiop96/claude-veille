@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-19",
+  lastUpdated: "2026-07-20",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,16 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "cc-screen-reader",
+      category: "claude-code",
+      title: "Mode lecteur d'écran",
+      summary: "Depuis v2.1.208 (14 juillet 2026), le mode lecteur d'écran remplace l'interface visuelle du terminal par du texte brut linéaire : les boîtes, spinners et réécritures sur place sont remplacés par des lignes étiquetées qu'un lecteur d'écran comme VoiceOver ou NVDA peut lire dans l'ordre, permettant d'approuver les permissions et de consulter les sorties de bout en bout. Activation via `claude --ax-screen-reader` (par session), la variable `CLAUDE_AX_SCREEN_READER=1` (par shell) ou `\"axScreenReader\": true` dans les paramètres (global).",
+      addedOn: "2026-07-20",
+      updatedOn: "2026-07-20",
+      source: "https://code.claude.com/docs/en/accessibility#turn-on-screen-reader-mode",
+      tags: ["cli", "accessibilité", "a11y"]
+    },
     {
       id: "ai-claude-teachers",
       category: "claude-ai",
@@ -349,6 +359,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-14",
+      category: "ecosystem",
+      title: "Anthropic s'engage à investir 10 M$ CAD dans la recherche IA canadienne",
+      summary: "Annoncé le 14 juillet 2026 : 10 millions de dollars canadiens (entièrement sous forme de crédits Claude) répartis entre 8 institutions — Amii (Edmonton), Mila (Montréal), Vector Institute (Toronto), CHEO, CAMH, Université Laval, Université de Toronto et Université de la Saskatchewan — chacune recevant 1 M$ en crédits API. Anthropic ne conserve aucun contrôle sur les directions ou résultats de recherche. Domaines couverts : apprentissage par renforcement, sûreté de l'IA, santé mentale, langues autochtones, informatique quantique. Les trois instituts (Amii, Mila, Vector) sont intégrés au programme Anthropic for Startups cet été, donnant à des centaines de startups affiliées au moins 5 000 $ USD en crédits API.",
+      source: "https://www.anthropic.com/news/canadian-ai-research"
+    },
     {
       date: "2026-07-19",
       category: "claude-code",
