@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-20",
+  lastUpdated: "2026-07-21",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -359,6 +359,27 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-21",
+      category: "models-api",
+      title: "Retraite de Claude Mythos Preview",
+      summary: "Au 21 juillet 2026, le modèle claude-mythos-preview est officiellement retiré : toutes les requêtes vers cet identifiant retournent désormais une erreur. Les développeurs participants au Projet Glasswing doivent migrer vers claude-mythos-5. La date de retraite, initialement fixée au 30 juin, avait été repoussée au 21 juillet pour laisser davantage de temps aux équipes pour migrer.",
+      source: "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      date: "2026-07-20",
+      category: "claude-code",
+      title: "Claude Code v2.1.216",
+      summary: "v2.1.216 (20 juil.) : nouveau paramètre sandbox.filesystem.disabled pour désactiver l'isolation du système de fichiers tout en conservant le contrôle des sorties réseau. Correction d'un ralentissement majeur dans les longues sessions où le coût de normalisation des messages croissait de façon quadratique avec le nombre de tours, causant des blocages de plusieurs secondes. Correction de l'auto mode refusant des commandes avec des erreurs \"HTTP 401\" du classificateur après expiration ou rotation du token OAuth en cours de session. Correction d'AskUserQuestion continuant la session même quand une réponse en texte libre demandait d'attendre ou d'expliquer d'abord. Correction des sessions web re-posant la même question et ignorant la réponse après quelques minutes d'inactivité. Plus de 30 correctifs additionnels : restauration de l'état des sessions background reprises (prompt + restrictions d'outils), isolation des worktrees git, symlinks dans .claude redirigés hors projet, lecture seule Windows sur chemins réseau sans invite de permission, parsing de caractères non-ASCII et Unicode invisible dans Bash/PowerShell, affichage de dialogs en mode plein écran, métriques Prometheus, skills et commandes modifiées non rechargées sans redémarrage, etc.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-07-20",
+      category: "claude-ai",
+      title: "AI for Science : appel à candidatures maladies génétiques rares",
+      summary: "Anthropic lance un appel à candidatures ciblé dans le cadre du programme AI for Science, dédié aux maladies génétiques rares. Les candidats sélectionnés reçoivent jusqu'à 50 000 $ de crédits Claude sur six mois pour construire une communauté de chercheurs explorant comment l'IA peut transformer la compréhension des maladies rares. Candidatures ouvertes jusqu'au 2 août 2026 à 23h59 PT. Parmi les bénéficiaires actuels du programme : Every Cure (repurposing de médicaments), Centre for Population Genomics (classification de variants), Violet Research Institute (pipelines FDA et bioinformatique). L'appel s'inscrit dans la continuité du lancement de Claude Science (1er juillet 2026).",
+      source: "https://www.anthropic.com/news/rare-disease-research-grants"
+    },
     {
       date: "2026-07-14",
       category: "ecosystem",

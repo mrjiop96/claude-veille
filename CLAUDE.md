@@ -39,6 +39,7 @@ Dashboard statique de veille sur les nouveautés de Claude. HTML/CSS/JS vanilla,
 - 2026-07-18 : veille auto — +1 news (Claude Code v2.1.214 : outil EndConversation anti-jailbreak, correctifs sécurité permissions dir/** / PowerShell / Bash / docker, OTel uuid+request_id, heartbeat outils longs, correctifs proxy Windows), màj feature cc-artifacts (connecteurs MCP en direct, liens partage public, rôles éditeur Team/Enterprise, artifacts depuis Claude Tag) → 34 features, 38 news.
 - 2026-07-19 : veille auto — +1 news (Claude Code v2.1.215 : /verify et /code-review ne s'exécutent plus automatiquement), +2 news (Fable 5 deuxième prolongation jusqu'au 19 juil. + correction entrée du 12 juil.), +1 news manquante (UST x Anthropic partenariat IA physique, 9 juil.), màj feature models-current (Fable 5 inclus jusqu'au 19 juil. 2026) → 34 features, 41 news.
 - 2026-07-20 : veille auto — +1 feature (cc-screen-reader : mode lecteur d'écran VoiceOver/NVDA depuis v2.1.208), +1 news (Anthropic 10 M$ CAD recherche IA canadienne, 8 institutions, 14 juil.) → 35 features, 42 news.
+- 2026-07-21 : veille auto — +3 news (Claude Code v2.1.216 : sandbox.filesystem.disabled, correctif ralentissement quadratique longues sessions, auto mode OAuth, 30+ correctifs, 20 juil. ; AI for Science appel maladies génétiques rares jusqu'au 2 août 2026, 20 juil. ; retraite claude-mythos-preview, 21 juil.) → 35 features, 45 news.
 
 ## Mise en ligne
 - Repo GitHub **public** : https://github.com/mrjiop96/claude-veille
