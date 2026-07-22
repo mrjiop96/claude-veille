@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-21",
+  lastUpdated: "2026-07-22",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -191,9 +191,9 @@ window.VEILLE_DATA = {
       id: "cc-subagents",
       category: "claude-code",
       title: "Sous-agents",
-      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…). Depuis v2.1.198 (semaine 27), les sous-agents s'exécutent en arrière-plan par défaut : Claude continue de travailler pendant leur exécution et récupère leurs résultats à la fin, au lieu de mettre la conversation en pause. Les sous-agents en arrière-plan remontent leurs demandes de permission dans la session principale. Le champ de métadonnées `background` permet de forcer le comportement. Depuis v2.1.212 (17 juil. 2026), `/subtask` permet la délégation in-session (sous-agent synchrone dans la conversation courante), tandis que `/fork` crée désormais une copie de la conversation dans une nouvelle session de fond.",
+      summary: "Délégation de tâches à des agents spécialisés (Explore, Plan, general-purpose…). Depuis v2.1.198 (semaine 27), les sous-agents s'exécutent en arrière-plan par défaut : Claude continue de travailler pendant leur exécution et récupère leurs résultats à la fin, au lieu de mettre la conversation en pause. Les sous-agents en arrière-plan remontent leurs demandes de permission dans la session principale. Le champ de métadonnées `background` permet de forcer le comportement. Depuis v2.1.212 (17 juil. 2026), `/subtask` permet la délégation in-session (sous-agent synchrone dans la conversation courante), tandis que `/fork` crée désormais une copie de la conversation dans une nouvelle session de fond. Depuis v2.1.217 (21 juil. 2026) : limite de sous-agents concurrents fixée à 20 par défaut (configurable via `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`) et les sous-agents n'en lancent plus d'autres par défaut (profondeur d'imbrication contrôlée par `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`).",
       addedOn: "2026-06-23",
-      updatedOn: "2026-07-17",
+      updatedOn: "2026-07-21",
       source: "https://code.claude.com/docs/en/sub-agents#run-subagents-in-foreground-or-background",
       tags: ["cli", "agents"]
     },
@@ -359,6 +359,27 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-21",
+      category: "claude-code",
+      title: "Claude Code v2.1.217",
+      summary: "v2.1.217 (21 juil.) : autocomplétion des emoji shortcodes (`:heart:` → ❤️, désactivable via `emojiCompletionEnabled`). Nouvelles limites pour les sous-agents : maximum 20 concurrents par défaut (`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`) et profondeur d'imbrication désactivée par défaut (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`). Avertissements quand les transcriptions ne peuvent pas être sauvegardées (disque plein ou backup désactivé par variable d'environnement héritée). Liens PR dans le footer désormais cliquables en hyperlien même sans détection de terminal (SSH/tmux), désactivable avec `FORCE_HYPERLINK=0`. Avertissement d'expiration de connexion avancé à 3 jours au lieu de 5. Principaux correctifs : fuite mémoire sur résultats MCP tronqués conservant la version complète en session ; auto-update Windows laissant `claude.exe` manquant (restauration automatique de l'exécutable préservé) ; sessions background s'échappant de leur workspace via symlinks non canonicalisés ; auto-compact Bedrock sur Opus 4.8 échouant après dépassement limite ; paramètres mTLS, TLS-verify, OAuth scope et proxy ignorés dans les sessions Desktop ; mode lecteur d'écran (annonce de démarrage tronquée, ligne « thinking » re-rendue toutes les 2–3 s) ; Remote Control ne montrant pas les dialogues de permission aux spectateurs connectés après apparition ; shells background impossibles à arrêter après mise en fond ou sur machine chargée ; expansion de braces dans CLAUDE.md/SKILL.md avec nombreux groupes causant OOM ou blocage ; `--max-budget-usd` n'arrêtant pas les sous-agents background une fois le plafond atteint.",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-07-09",
+      category: "ecosystem",
+      title: "Campagne « Inviting hard questions » d'Anthropic",
+      summary: "Le 9 juillet 2026, Anthropic lance « Inviting hard questions » — initiative de marque et de recherche composée d'un film de 90 secondes (« There's Hope in Hard Questions », produit par Mother, réalisé par Myles McAuliffe), d'un site de soumission de questions et d'un engagement à publier des réponses publiques sur les préoccupations sociétales liées à l'IA (emploi, sécurité, famille, potentiel scientifique). L'initiative s'appuie sur des conversations avec plus de 120 000 personnes dans le monde : 52 000 Américains sondés sur leurs espoirs et craintes, 81 000 utilisateurs de Claude dans 159 pays et 70 langues, et des groupes de discussion en présentiel. Anthropic s'engage à suivre et publier ses progrès face aux questions reçues. La campagne a suscité un vif débat public — Sam Altman a décrit ironiquement le spot comme ce qu'il pensait être de la satire, générant plus d'un million de vues.",
+      source: "https://www.anthropic.com/news/hard-questions"
+    },
+    {
+      date: "2026-07-06",
+      category: "ecosystem",
+      title: "Le gouvernement de l'Alberta déploie Claude Code pour la cybersécurité",
+      summary: "Le gouvernement de l'Alberta (Canada) utilise Claude Code (Opus et Sonnet) pour réviser la sécurité de ses systèmes informatiques provinciaux. L'équipe du Ministry of Technology and Innovation scanne 466 millions de lignes de code en 20 heures, couvrant les systèmes de 27 ministères. Quand une vulnérabilité est détectée, Claude Code génère un correctif, le teste et l'intègre — si les tests automatisés manquent, il les écrit d'abord. Des systèmes obsolètes entiers peuvent être reconstruits dans un langage moderne en 4 à 5 jours : un portail de subventions codé en Java depuis 25 ans (5 mois de travail à l'origine) a été reconstruit en quelques jours. Chaque patch est revu et approuvé par les ingénieurs avant déploiement. L'Alberta publie ses livres blancs techniques pour que d'autres gouvernements puissent reproduire la démarche.",
+      source: "https://www.anthropic.com/news/alberta-government-claude-cybersecurity"
+    },
     {
       date: "2026-07-21",
       category: "models-api",
