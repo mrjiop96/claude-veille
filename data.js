@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-22",
+  lastUpdated: "2026-07-23",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -7,6 +7,16 @@ window.VEILLE_DATA = {
     { id: "ecosystem",   label: "Écosystème" }
   ],
   features: [
+    {
+      id: "eco-economic-index-connector",
+      category: "ecosystem",
+      title: "Connecteur Anthropic Economic Index",
+      summary: "Connecteur MCP lancé le 22 juillet 2026 dans le menu connecteurs de claude.ai, permettant à tout utilisateur d'interroger en langage naturel les données de l'Anthropic Economic Index : adoption de l'IA par État américain, par métier et par type de tâche. Exemples : « Quels métiers utilisent le plus l'IA ? », « Quelles tâches les enseignants confient-ils à Claude ? ». Aucune installation requise, compatible avec tous les modèles Claude, fonctionne dans n'importe quelle conversation.",
+      addedOn: "2026-07-23",
+      updatedOn: "2026-07-23",
+      source: "https://www.anthropic.com/news/anthropic-economic-index-connector",
+      tags: ["web", "connecteur", "mcp", "data", "économie"]
+    },
     {
       id: "cc-screen-reader",
       category: "claude-code",
@@ -359,6 +369,34 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-22",
+      category: "claude-code",
+      title: "Claude Code v2.1.218",
+      summary: "v2.1.218 (22 juil.) : `/code-review` s'exécute désormais comme sous-agent de fond — le travail de revue ne remplit plus la conversation et les commandes slash empilées restent comme cible de revue. Annonces d'accessibilité en mode lecteur d'écran pour les suppressions de texte (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K). `/deep-research` ne démarre plus que sur invocation manuelle. Plan mode + auto mode ne demande plus de confirmation pour les commandes Bash que l'analyseur statique peut prouver en lecture seule. Les skills avec `context: fork` s'exécutent en arrière-plan par défaut (opt-out via `background: false`). Ajout du statut HTTP et du texte d'erreur dans `claude mcp list` et `/mcp` quand un serveur échoue à se connecter. Les valeurs booléennes `yes`/`no`/`on`/`off`/`1`/`0` (insensibles à la casse) sont désormais acceptées dans les frontmatter de skills et plugins. Principaux correctifs : chemins Windows avec segments préfixés par backslash-u (ex. `C:\\Users\\unicorn`) corrompus en caractères CJK ; touche fléchée gauche abandonnant la conversation sans confirmation ; plugins chargés via `--settings` non chargés (régression depuis v2.1.181) ; feature flags périmés dans les longues sessions après rotation OAuth ; `/ultrareview` bloquant sur les repos sans merge base ; `claude update` et `claude doctor` bloquant silencieusement ; valeurs frontmatter mémoire tronquées au `#` inline ; double comptage coût/tokens en télémétrie OTel ; 15+ autres correctifs (race écriture historique, moteur fantôme, messages « interrompu » parasites, crashes VoiceOver, Bedrock assume-role, durées de tour négatives).",
+      source: "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      date: "2026-07-22",
+      category: "ecosystem",
+      title: "Connecteur Anthropic Economic Index pour Claude",
+      summary: "Anthropic lance le 22 juillet 2026 le connecteur Anthropic Economic Index dans le menu connecteurs de claude.ai. Ce connecteur MCP permet à tout utilisateur d'interroger en langage naturel les données du baromètre d'adoption de l'IA dans l'économie américaine (tous les États, des centaines de métiers). Exemples : « Quels métiers utilisent le plus l'IA ? », « Quels sont les usages les plus courants au Colorado ? », « Que font les enseignants avec Claude ? ». Compatible avec tous les modèles Claude, sans installation.",
+      source: "https://www.anthropic.com/news/anthropic-economic-index-connector"
+    },
+    {
+      date: "2026-07-22",
+      category: "ecosystem",
+      title: "Fonds Economic Futures Research : agenda et 200 M$",
+      summary: "Anthropic publie le 22 juillet 2026 l'agenda de recherche de son fonds Anthropic Economic Futures Research Fund, doté de 200 millions de dollars pour financer des recherches externes sur les interventions permettant de préparer la société aux impacts économiques de l'IA. Cinq domaines prioritaires : (1) façonner l'impact de l'IA sur les travailleurs au niveau des entreprises ; (2) équiper les individus pour naviguer les transitions liées à l'IA ; (3) moderniser les filets de sécurité pour les déplacements d'emplois ; (4) construire des participations des travailleurs dans la croissance générée par l'IA avant les disruptions ; (5) générer de nouvelles preuves sur les investissements publics. Géré de manière indépendante, sans direction des orientations de recherche par Anthropic.",
+      source: "https://www.anthropic.com/news/economic-futures-research-fund-agenda"
+    },
+    {
+      date: "2026-07-22",
+      category: "ecosystem",
+      title: "Anthropic double son soutien à Public First Action (+20 M$)",
+      summary: "Le 22 juillet 2026, Anthropic annonce un don supplémentaire de 20 millions de dollars à Public First Action — organisation non partisane dédiée à l'éducation du public sur l'IA et au plaidoyer pour des garde-fous légaux —, portant son engagement total à 40 millions de dollars. La décision est motivée par l'émergence de modèles toujours plus puissants, dont Mythos 5 d'Anthropic. Les fonds sont exclusivement destinés à la mission d'éducation publique et politique, sans possibilité d'influence électorale.",
+      source: "https://www.anthropic.com/news/donation-public-first-action"
+    },
     {
       date: "2026-07-21",
       category: "claude-code",
