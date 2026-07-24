@@ -1,5 +1,5 @@
 window.VEILLE_DATA = {
-  lastUpdated: "2026-07-23",
+  lastUpdated: "2026-07-24",
   categories: [
     { id: "models-api",  label: "Modèles & API" },
     { id: "claude-code", label: "Claude Code" },
@@ -369,6 +369,13 @@ window.VEILLE_DATA = {
     }
   ],
   news: [
+    {
+      date: "2026-07-24",
+      category: "models-api",
+      title: "Suppression du fast mode pour Claude Opus 4.7",
+      summary: "À compter du 24 juillet 2026, le fast mode est retiré pour claude-opus-4-7 : tout appel avec le fast mode activé sur ce modèle retourne désormais une erreur sans repli sur le mode standard Opus 4.7. La dépréciation avait été annoncée le 25 juin 2026. Migration recommandée : basculer vers claude-opus-4-8 pour conserver l'accélération (jusqu'à 2,5× plus rapide, 10 $ / 50 $ par Mtok en entrée/sortie, contre 30 $ / 150 $ sur Opus 4.7). Le fast mode reste disponible sur Opus 4.8 via crédits d'usage uniquement.",
+      source: "https://code.claude.com/docs/en/fast-mode"
+    },
     {
       date: "2026-07-22",
       category: "claude-code",
